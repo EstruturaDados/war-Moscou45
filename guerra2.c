@@ -17,3 +17,10 @@ struct Territorio {
     int tropas;
 };
 
+// --- Função para limpar o buffer de entrada ---
+
+void limparBufferEntrada(){
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
