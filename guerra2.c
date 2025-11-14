@@ -54,13 +54,26 @@ int main(){
             paises[total_territorios].cor[strcspn(paises[total_territorios].cor, "\n")] = '\0';
 
             printf("Numero de tropas: ");
-            sscanf("&d", &paises[total_territorios].tropas);
+            scanf("%d", &paises[total_territorios].tropas);
             limparBufferEntrada();
 
             //i++;
             total_territorios++;
 
         }
+
+        // Mostrando todos os continentes cadastrados
+        printf("\n===========================================");
+        printf("   MAPA DO MUNDO - ESTADO ATUAL   ");
+        printf("===========================================\n");
+
+        for(int i =0; i < total_territorios; i++){
+
+            printf("%d. %s (Exercito: %s, tropas: %d)\n", i, paises[i].nome,paises[i].cor, paises[i].tropas);
+        }
+
+        
+
 
     } while (opcao != 0);
     return 0;
