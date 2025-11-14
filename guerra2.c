@@ -72,7 +72,11 @@ int main(){
             printf("%d. %s (Exercito: %s, tropas: %d)\n", i, paises[i].nome,paises[i].cor, paises[i].tropas);
         }
 
-        
+        // pausa é crucial para que o usario veja a lista antes
+        // do proximo loop limpar a tela
+        printf("\nPressione Enter para continuar...");
+        getchar();
+        break;
 
 
     } while (opcao != 0);
