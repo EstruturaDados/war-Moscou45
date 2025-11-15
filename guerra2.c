@@ -41,7 +41,7 @@ int main(){
         while (total_territorios < MAX_TERRITORIO){
             int i =1;
 
-            printf("\n--- Cadastro do territorio %d---\n", i +total_territorios);
+            printf("\n--- Cadastrando Territorio %d ---\n", i +total_territorios);
 
             printf("Nome do territorio: ");
             fgets(paises[total_territorios].nome, TAM_STRING, stdin);
@@ -63,19 +63,21 @@ int main(){
         }
 
         // Mostrando todos os continentes cadastrados
-        printf("\n===========================================");
+        printf("\n===========================");
         printf("   MAPA DO MUNDO - ESTADO ATUAL   ");
-        printf("===========================================\n");
-
+        
         for(int i =0; i < total_territorios; i++){
 
-            printf("%d. %s (Exercito: %s, tropas: %d)\n", i, paises[i].nome,paises[i].cor, paises[i].tropas);
+            //printf("%d. %s (Exercito: %s, tropas: %d)\n", i, paises[i].nome,paises[i].cor, paises[i].tropas);
+            printf("===========================\n");
+            printf("Territorio: %d\n", i + 1);
+            printf("- Nome: %s\n", paises[i].nome);
+            printf("- Dominado por: Exercito %s\n", paises[i].cor);
+            printf("- Tropas: %d\n", paises[i].tropas);
         }
 
         // pausa é crucial para que o usario veja a lista antes
         // do proximo loop limpar a tela
-        printf("\nPressione Enter para continuar...");
-        getchar();
         break;
 
 
